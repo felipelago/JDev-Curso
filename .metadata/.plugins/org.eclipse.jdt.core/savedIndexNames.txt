@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\Users\Lipe\Projetos Java\JDev Curso\.metadata\.plugins\org.eclipse.jdt.core
+2426615701.index
+1289320443.index

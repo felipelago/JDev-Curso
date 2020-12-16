@@ -1,0 +1,11 @@
+package cursojava.classes;
+
+public class aluno {
+	
+	String nome;
+	int idade;
+	String dataNascimento;
+	String rg;
+	String cpf;
+	String nomeMae;
+}

@@ -1,0 +1,36 @@
+package cursojava.executavel;
+
+import javax.swing.JOptionPane;
+
+import com.sun.jdi.IntegerValue;
+
+import cursojava.classes.aluno;
+
+public class primeiraclasse {
+
+	public static void main(String[] args) {
+		
+		String nome = JOptionPane.showInputDialog("Qual o nome do primeiro aluno ?");
+		String idade = JOptionPane.showInputDialog("Qual a idade do primeiro aluno ?");
+		
+		
+		aluno aluno1 = new aluno();
+
+		aluno1.setNome(nome);
+		aluno1.setIdade(Integer.valueOf(idade));
+		aluno1.setDataNascimento("23/04/1994");
+		aluno1.setRg("199.199.199,79");
+		aluno1.setNota1(10.0);
+		aluno1.setNota2(7.5);
+		aluno1.setNota3(5.6);
+		aluno1.setNota4(8.1);
+
+		
+		System.out.println("O nome do aluno é: " + aluno1.getNome());
+		System.out.println("O aluno: " + aluno1.getNome() + " tem " + aluno1.getIdade() + " anos.");
+		System.out.println("O aluno: " + aluno1.getNome() + " nasceu em: " + aluno1.getDataNascimento());
+		System.out.println("A média do aluno: " + aluno1.getNome() + " é: " + aluno1.getMediaNotas());
+		System.out.println("O Aluno " + aluno1.getNome()+ " foi " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
+	}
+
+}
