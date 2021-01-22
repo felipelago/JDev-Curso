@@ -25,10 +25,11 @@ public class primeiraclasse {
 		aluno1.setIdade(Integer.valueOf(idade));
 		aluno1.setDataNascimento(dataNascimento);
 		aluno1.setRg(rg);
-		aluno1.setNota1(Double.parseDouble(note1));
-		aluno1.setNota2(Double.parseDouble(note2));
-		aluno1.setNota3(Double.parseDouble(note3));
-		aluno1.setNota4(Double.parseDouble(note4));
+		//Double.parseDouble é para converter as informações obtidas em JOptionPane (String) para Double
+		aluno1.getDisciplina().setNota1(Double.parseDouble(note1));
+		aluno1.getDisciplina().setNota2(Double.parseDouble(note2));
+		aluno1.getDisciplina().setNota3(Double.parseDouble(note3));
+		aluno1.getDisciplina().setNota4(Double.parseDouble(note4));
 
 		
 		System.out.println(aluno1);

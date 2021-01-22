@@ -2,51 +2,26 @@ package cursojava.classes;
 
 public class aluno {
 
-	String nome;
-	int idade;
-	String dataNascimento;
-	String rg;
-	String cpf;
-	String nomeMae;
-	String nomePai;
-	String dataMatricula;
-	String nomeEscola;
-	String serie;
-	Double nota1;
-	Double nota2;
-	Double nota3;
-	Double nota4;
+	private String nome;
+	private int idade;
+	private String dataNascimento;
+	private String rg;
+	private String cpf;
+	private String nomeMae;
+	private String nomePai;
+	private String dataMatricula;
+	private String nomeEscola;
+	private String serie;
+	
+	private disciplina disciplina = new disciplina();
 
-	public Double getNota1() {
-		return nota1;
+	
+	public disciplina getDisciplina() {
+		return disciplina;
 	}
 
-	public void setNota1(Double nota1) {
-		this.nota1 = nota1;
-	}
-
-	public Double getNota2() {
-		return nota2;
-	}
-
-	public void setNota2(Double nota2) {
-		this.nota2 = nota2;
-	}
-
-	public Double getNota3() {
-		return nota3;
-	}
-
-	public void setNota3(Double nota3) {
-		this.nota3 = nota3;
-	}
-
-	public Double getNota4() {
-		return nota4;
-	}
-
-	public void setNota4(Double nota4) {
-		this.nota4 = nota4;
+	public void setDisciplina(disciplina disciplina) {
+		this.disciplina = disciplina;
 	}
 
 	public String getNome() {
@@ -131,7 +106,7 @@ public class aluno {
 
 	// Metodo que retorna a média
 	public double getMediaNotas() {
-		return (nota1 + nota2 + nota3 + nota4) / 4;
+		return (disciplina.getNota1() + disciplina.getNota2() + disciplina.getNota3() + disciplina.getNota4() ) / 4;
 	}
 
 	// Método que retorna true para aprovado e false para reprovado
@@ -144,12 +119,5 @@ public class aluno {
 		}
 		
 	}
-
-	@Override
-	public String toString() {
-		return "aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", rg=" + rg
-				+ ", cpf=" + cpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai + ", dataMatricula=" + dataMatricula
-				+ ", nomeEscola=" + nomeEscola + ", serie=" + serie + ", nota1=" + nota1 + ", nota2=" + nota2
-				+ ", nota3=" + nota3 + ", nota4=" + nota4 + "]";
-	}
+	
 }

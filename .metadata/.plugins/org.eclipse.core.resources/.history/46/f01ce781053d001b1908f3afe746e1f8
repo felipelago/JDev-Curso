@@ -1,9 +1,0 @@
-package cursojava.executavel;
-
-public class primeiraclasse {
-
-	public static void main(String[] args) {
-
-	}
-
-}
