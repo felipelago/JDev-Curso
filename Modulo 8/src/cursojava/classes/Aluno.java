@@ -1,6 +1,9 @@
 package cursojava.classes;
 
-public class aluno {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Aluno {
 
 	private String nome;
 	private int idade;
@@ -12,16 +15,15 @@ public class aluno {
 	private String dataMatricula;
 	private String nomeEscola;
 	private String serie;
-	
-	private disciplina disciplina = new disciplina();
+	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
 
 	
-	public disciplina getDisciplina() {
-		return disciplina;
+	public List<Disciplina> getDisciplinas() {
+		return disciplinas;
 	}
 
-	public void setDisciplina(disciplina disciplina) {
-		this.disciplina = disciplina;
+	public void setDisciplinas(List<Disciplina> disciplinas) {
+		this.disciplinas = disciplinas;
 	}
 
 	public String getNome() {
@@ -106,7 +108,11 @@ public class aluno {
 
 	// Metodo que retorna a média
 	public double getMediaNotas() {
-		return (disciplina.getNota1() + disciplina.getNota2() + disciplina.getNota3() + disciplina.getNota4() ) / 4;
+		double somaNotas = 0.0;
+		for (Disciplina disciplina : disciplinas) {
+			somaNotas += disciplina.getNota();
+		}
+		return somaNotas / disciplinas.size();
 	}
 
 	// Método que retorna true para aprovado e false para reprovado
@@ -118,6 +124,13 @@ public class aluno {
 			return false;
 		}
 		
+	}
+
+	@Override
+	public String toString() {
+		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", rg=" + rg
+				+ ", cpf=" + cpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai + ", dataMatricula=" + dataMatricula
+				+ ", nomeEscola=" + nomeEscola + ", serie=" + serie + ", disciplinas=" + disciplinas + "]";
 	}
 	
 }
